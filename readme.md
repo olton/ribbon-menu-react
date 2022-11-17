@@ -11,7 +11,15 @@ Contextual tabs are tabs that appear only when the user needs them.
 
 <hr>
 
-## Component sponsored by [Giovanni Tummarello](g.tummarello@octostar.co)
+### Component sponsored by [Giovanni Tummarello](g.tummarello@octostar.co)
 
 <hr>
 
+### Metro UI
+Original component created for [Metro UI](https://korzh.com/metroui) by [Serhii Pimenov](https://pimenov.com.ua).
+
+MetroUI is an open-source frontend toolkit inspired by Microsoft Fluent (former Metro) design principles. You can consider it as a Bootstrap replacement for web sites that need a fresh and catchy look.
+MetroUI includes everything you need to build your frontend app: responsive grid system, 100+ prebuilt components, 500+ incons, and powerful JavaScript plugins.
+
+### License
+Ribbon Menu component is open-source project licensed by [MIT](license) license
