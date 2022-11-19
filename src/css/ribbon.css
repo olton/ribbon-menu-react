@@ -1,3 +1,8 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 .ribbon-menu {
   display: block;
   position: relative;
@@ -32,6 +37,7 @@
 .ribbon-menu .tabs-holder li:hover {
   border-left-color: #dadbdc;
   border-right-color: #dadbdc;
+  border-top-color: #dadbdc;
 }
 .ribbon-menu .tabs-holder li + li {
   margin-left: 3px;
@@ -55,20 +61,26 @@
 .ribbon-menu .content-holder {
   display: block;
   position: relative;
-}
-.ribbon-menu .content-holder {
   background-color: #f5f6f7;
   border-left: none;
   border-right: none;
 }
-.ribbon-menu .content-holder .section {
+.ribbon-menu .content-holder .ribbon-section {
   display: none;
   padding: 4px 4px;
   border-bottom: 1px solid #dadbdc;
   justify-content: flex-start;
 }
-.ribbon-menu .content-holder .section.active {
+.ribbon-menu .content-holder .ribbon-section.active {
   display: flex;
+}
+.ribbon-menu .content-holder .ribbon-section-divider {
+  display: block;
+  position: relative;
+  margin: 0 4px;
+  height: 100%!important;
+  width: 1px;
+  background-color: #dadbdc;
 }
 .ribbon-menu .content-holder .group {
   padding: 0 4px 24px;
@@ -95,16 +107,7 @@
   border-top: 1px solid #dadbdc;
   white-space: nowrap;
 }
-.ribbon-menu .content-holder .group .group-divider {
-  display: block;
-  position: relative;
-  height: 100%;
-  margin: 0 4px;
-  width: 1px;
-  background-color: #dadbdc;
-}
-.ribbon-menu .content-holder .group > *:not(.title),
-.ribbon-menu .content-holder .group > *:not(.group-divider) {
+.ribbon-menu .content-holder .group > *:not(.title) {
   margin: 2px;
 }
 .ribbon-menu .content-holder .group + .group {
@@ -432,7 +435,7 @@
   background-color: rgba(164, 206, 249, 0.8) !important;
 }
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
-  .ribbon-menu .content-holder .section {
+  .ribbon-menu .content-holder .ribbon-section {
     height: 130px;
   }
   .ribbon-toggle-group {
@@ -440,7 +443,7 @@
   }
 }
 @supports (-ms-ime-align:auto) {
-  .ribbon-menu .content-holder .section {
+  .ribbon-menu .content-holder .ribbon-section {
     height: 130px;
   }
 }
