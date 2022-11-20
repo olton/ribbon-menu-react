@@ -14,21 +14,12 @@
 @white: #ffffff;
 @zindex-dropdown: 1000;
 
+@import "../helpers/mixins";
+
 *,
 *::before,
 *::after { box-sizing:border-box; }
 
-.translateY(@y: 0) {
-    transform+_: translateY(@y);
-}
-
-.translateX(@x: 0) {
-    transform+_: translateX(@x);
-}
-
-.rotate(@degrees) {
-    transform+_: rotate(@degrees);
-}
 
 .ribbon-menu {
     display: block;
@@ -205,14 +196,14 @@
     }
 
     .icon + .caption {
-        margin-top: 8px;
+        //margin-top: 8px;
     }
 
     &.dropdown-toggle {
-        padding-right: 4px !important;
+        padding-right: 12px !important;
 
         &::before {
-            margin-left: -.65rem;
+            margin-left: -8px;
         }
     }
 }
@@ -261,6 +252,9 @@
     height: 24px;
     padding: 0 2px;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     * {
         width: 16px;
@@ -310,7 +304,7 @@
         border-color: @ribbonMenuItemBorder;
 
         .ribbon-split {
-            border-color: @ribbonMenuItemBorder;
+            border-top-color: @ribbonMenuItemBorder;
         }
     }
 

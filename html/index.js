@@ -3,6 +3,15 @@ import { createRoot } from 'react-dom/client';
 import {RibbonButton, RibbonMenu, RibbonDivider, RibbonGroup, RibbonTab} from "../src";
 
 import "./css/index.css"
+import {RibbonIconButton} from "../src/ribbon/icon-button";
+import {RibbonToolButton} from "../src/ribbon/tool-button";
+import {
+    RibbonDropdown,
+    RibbonDropdownDivider,
+    RibbonDropdownItem,
+    RibbonDropdownMenu
+} from "../src/ribbon/dropdown-menu";
+import {RibbonSplitButton} from "../src/ribbon/split-button";
 
 class App extends Component{
     render(){
@@ -30,9 +39,82 @@ class App extends Component{
                                 <RibbonGroup title="group1">
                                     <RibbonButton caption="Mail" image="images/email.svg"/>
                                     <RibbonButton caption="Share" image="images/share.svg"/>
+
+                                    <RibbonDropdown>
+                                        <RibbonButton className="dropdown-toggle" caption="Mail" image="images/email.svg"/>
+                                        <RibbonDropdownMenu>
+                                            <RibbonDropdownItem checked caption="Modification"/>
+                                            <RibbonDropdownItem checked caption="Type"/>
+                                            <RibbonDropdownItem checked caption="Size"/>
+                                            <RibbonDropdownItem caption="Creating"/>
+                                            <RibbonDropdownItem caption="Authors"/>
+                                            <RibbonDropdownItem checkedOne caption="Tags"/>
+                                            <RibbonDropdownItem caption="Names"/>
+                                            <RibbonDropdownDivider/>
+                                            <RibbonDropdown>
+                                                <RibbonDropdownItem caption="Columns..."/>
+                                                <RibbonDropdownMenu>
+                                                    <RibbonDropdownItem caption="SubItem1"/>
+                                                    <RibbonDropdownItem caption="SubItem2"/>
+                                                    <RibbonDropdownItem caption="SubItem3"/>
+                                                </RibbonDropdownMenu>
+                                            </RibbonDropdown>
+                                        </RibbonDropdownMenu>
+                                    </RibbonDropdown>
+
                                     <RibbonDivider/>
-                                    <RibbonButton caption="Mail" image="images/email.svg"/>
-                                    <RibbonButton caption="Share" image="images/share.svg"/>
+
+                                    <RibbonIconButton caption="Mail" image="images/email.svg"/>
+                                    <RibbonIconButton caption="Share" image="images/share.svg"/>
+                                    <RibbonDropdown>
+                                        <RibbonIconButton caption="Mail" image="images/email.svg"/>
+                                        <RibbonDropdownMenu>
+                                            <RibbonDropdownItem checked caption="Modification"/>
+                                            <RibbonDropdownItem checked caption="Type"/>
+                                            <RibbonDropdownItem checked caption="Size"/>
+                                            <RibbonDropdownItem caption="Creating"/>
+                                            <RibbonDropdownItem caption="Authors"/>
+                                            <RibbonDropdownItem checked-one caption="Tags"/>
+                                            <RibbonDropdownItem caption="Names"/>
+                                            <RibbonDropdownDivider/>
+                                            <RibbonDropdownItem caption="Columns..."/>
+                                        </RibbonDropdownMenu>
+                                    </RibbonDropdown>
+
+                                    <RibbonDivider/>
+
+                                    <RibbonSplitButton image="images/email.svg" caption="Options">
+                                        <RibbonDropdownMenu>
+                                            <RibbonDropdownItem checked caption="Modification"/>
+                                            <RibbonDropdownItem checked caption="Type"/>
+                                            <RibbonDropdownItem checked caption="Size"/>
+                                            <RibbonDropdownItem caption="Creating"/>
+                                            <RibbonDropdownItem caption="Authors"/>
+                                            <RibbonDropdownItem checked-one caption="Tags"/>
+                                            <RibbonDropdownItem caption="Names"/>
+                                            <RibbonDropdownDivider/>
+                                            <RibbonDropdownItem caption="Columns..."/>
+                                        </RibbonDropdownMenu>
+                                    </RibbonSplitButton>
+
+                                    <RibbonDivider/>
+
+                                    <RibbonToolButton caption="Mail" image="images/email.svg"/>
+                                    <RibbonToolButton caption="Share" image="images/share.svg"/>
+                                    <RibbonDropdown>
+                                        <RibbonToolButton caption="Mail" image="images/email.svg"/>
+                                        <RibbonDropdownMenu>
+                                            <RibbonDropdownItem checked caption="Modification"/>
+                                            <RibbonDropdownItem checked caption="Type"/>
+                                            <RibbonDropdownItem checked caption="Size"/>
+                                            <RibbonDropdownItem caption="Creating"/>
+                                            <RibbonDropdownItem caption="Authors"/>
+                                            <RibbonDropdownItem checked-one caption="Tags"/>
+                                            <RibbonDropdownItem caption="Names"/>
+                                            <RibbonDropdownDivider/>
+                                            <RibbonDropdownItem caption="Columns..."/>
+                                        </RibbonDropdownMenu>
+                                    </RibbonDropdown>
                                 </RibbonGroup>
                             </RibbonTab>
                             <RibbonTab label="Edit">
