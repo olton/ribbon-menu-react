@@ -1,9 +1,9 @@
 import {Icon} from "../helpers/icon";
 import {Image} from "../helpers/image";
 
-export const RibbonToolButton = ({className, cls, icon, image, caption}) => {
+export const RibbonToolButton = ({className, cls, icon, image, caption, ...rest}) => {
     return (
-        <button className={`ribbon-tool-button ${cls} ${className}`} title={caption}>
+        <button className={`ribbon-tool-button ${cls} ${className}`} title={caption} {...rest}>
             {icon && (
                 <Icon name={icon} />
             )}

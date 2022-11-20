@@ -8,12 +8,12 @@ export const RibbonDropdownDivider = () => {
     )
 }
 
-export const RibbonDropdownItem = ({target = "#", caption, checked, checkedOne}) => {
+export const RibbonDropdownItem = ({target = "#", caption, checked, checkedOne, ...rest}) => {
     const classes = classNames(
         {checked, "checked-one": checkedOne}
     )
     return (
-        <li className={classes}>
+        <li className={classes} {...rest}>
             <a href={target}>{caption}</a>
         </li>
     )
