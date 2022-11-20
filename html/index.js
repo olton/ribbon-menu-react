@@ -1,10 +1,8 @@
-import {Component} from "react";
+import { Component } from "react";
 import { createRoot } from 'react-dom/client';
-import {RibbonButton, RibbonMenu, RibbonTab, RibbonTabs} from "../src";
+import {RibbonButton, RibbonMenu, RibbonDivider, RibbonGroup, RibbonTab} from "../src";
 
 import "./css/index.css"
-import {RibbonSection, RibbonSectionDivider, RibbonSections} from "../src/ribbon/section";
-import {RibbonGroup} from "../src/ribbon/group";
 
 class App extends Component{
     render(){
@@ -25,28 +23,24 @@ class App extends Component{
                             <span className={`caption-button btn-clo`}></span>
                         </div>
                     </div>
+
                     <RibbonMenu>
-                        <RibbonTabs>
-                            <RibbonTab className={`static`}>Home</RibbonTab>
-                            <RibbonTab target="file">File</RibbonTab>
-                            <RibbonTab target="edit">Edit</RibbonTab>
-                            <RibbonTab target="view">View</RibbonTab>
-                        </RibbonTabs>
-
-                        <RibbonSections>
-                            <RibbonSection id={`file`} className="active">
+                            <RibbonTab mode="static" label="Home"></RibbonTab>
+                            <RibbonTab label="File">
                                 <RibbonGroup title="group1">
-                                    <RibbonButton caption="Mail" image="/images/email.svg"/>
-                                    <RibbonButton caption="Share" image="/images/share.svg"/>
-                                    <RibbonSectionDivider/>
-                                    <RibbonButton caption="Mail" image="/images/email.svg"/>
-                                    <RibbonButton caption="Share" image="/images/share.svg"/>
+                                    <RibbonButton caption="Mail" image="images/email.svg"/>
+                                    <RibbonButton caption="Share" image="images/share.svg"/>
+                                    <RibbonDivider/>
+                                    <RibbonButton caption="Mail" image="images/email.svg"/>
+                                    <RibbonButton caption="Share" image="images/share.svg"/>
                                 </RibbonGroup>
-
-                            </RibbonSection>
-                            <RibbonSection id={`edit`}>Edit</RibbonSection>
-                            <RibbonSection id={`view`}>View</RibbonSection>
-                        </RibbonSections>
+                            </RibbonTab>
+                            <RibbonTab label="Edit">
+                                Edit
+                            </RibbonTab>
+                            <RibbonTab label="View">
+                                View
+                            </RibbonTab>
                     </RibbonMenu>
                 </div>
             </section>

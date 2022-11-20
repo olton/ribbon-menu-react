@@ -33,6 +33,7 @@
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   border-bottom: 1px solid #dadbdc;
+  cursor: pointer;
 }
 .ribbon-menu .tabs-holder li:hover {
   border-left-color: #dadbdc;
@@ -74,7 +75,7 @@
 .ribbon-menu .content-holder .ribbon-section.active {
   display: flex;
 }
-.ribbon-menu .content-holder .ribbon-section-divider {
+.ribbon-menu .content-holder .ribbon-divider {
   display: block;
   position: relative;
   margin: 0 4px;
