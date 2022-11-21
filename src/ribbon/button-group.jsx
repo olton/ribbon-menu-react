@@ -1,9 +1,4 @@
-import {Component, useState} from "react";
-
 import React from "react";
-// import "./buttonh-group.css";
-
-// TODO Remove active prop from Button
 
 export class RibbonButtonGroup extends React.Component {
     constructor(props){
