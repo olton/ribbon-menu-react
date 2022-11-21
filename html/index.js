@@ -1,19 +1,24 @@
 import { Component } from "react";
 import { createRoot } from 'react-dom/client';
-import {RibbonButton, RibbonMenu, RibbonDivider, RibbonGroup, RibbonTab} from "../src";
-
-import "./css/index.css"
-import {RibbonIconButton} from "../src/ribbon/icon-button";
-import {RibbonToolButton} from "../src/ribbon/tool-button";
 import {
-    RibbonDropdown, RibbonDropdownCheckItem,
+    RibbonButton,
+    RibbonMenu,
+    RibbonDivider,
+    RibbonGroup,
+    RibbonTab,
+    RibbonIconButton,
+    RibbonToolButton,
+    RibbonDropdown,
+    RibbonDropdownCheckItem,
     RibbonDropdownDivider,
     RibbonDropdownItem,
-    RibbonDropdownMenu
-} from "../src/ribbon/dropdown-menu";
-import {RibbonSplitButton} from "../src/ribbon/split-button";
-import {RibbonButtonGroup} from "../src/ribbon/button-group";
-import {RibbonSubGroup} from "../src/ribbon/ribbon-menu";
+    RibbonDropdownMenu,
+    RibbonSplitButton,
+    RibbonButtonGroup,
+    RibbonSubGroup
+} from "../src";
+
+import "./css/index.css"
 
 class App extends Component{
     render(){
