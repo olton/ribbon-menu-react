@@ -122,7 +122,7 @@ class App extends Component{
 
                                     <RibbonDivider/>
 
-                                    <RibbonButtonGroup radio>
+                                    <RibbonButtonGroup radio  style={{width: "200px"}}>
                                         <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-list"/>
                                         <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-gear"/>
                                         <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-barcode"/>
