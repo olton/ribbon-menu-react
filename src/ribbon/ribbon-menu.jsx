@@ -135,3 +135,11 @@ export class RibbonMenu extends React.Component {
         )
     }
 }
+
+export const RibbonSubGroup = ({children, style}) => {
+    return (
+        <div className="ribbon-sub-group" style={style}>
+            {children}
+        </div>
+    )
+}

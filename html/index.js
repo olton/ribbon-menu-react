@@ -12,6 +12,8 @@ import {
     RibbonDropdownMenu
 } from "../src/ribbon/dropdown-menu";
 import {RibbonSplitButton} from "../src/ribbon/split-button";
+import {RibbonButtonGroup} from "../src/ribbon/button-group";
+import {RibbonSubGroup} from "../src/ribbon/ribbon-menu";
 
 class App extends Component{
     render(){
@@ -64,22 +66,24 @@ class App extends Component{
 
                                     <RibbonDivider/>
 
-                                    <RibbonIconButton caption="Mail" image="images/email.svg"/>
-                                    <RibbonIconButton caption="Share" image="images/share.svg"/>
-                                    <RibbonDropdown>
+                                    <RibbonSubGroup style={{width: '60px'}}>
                                         <RibbonIconButton caption="Mail" image="images/email.svg"/>
-                                        <RibbonDropdownMenu>
-                                            <RibbonDropdownItem checked caption="Modification"/>
-                                            <RibbonDropdownItem checked caption="Type"/>
-                                            <RibbonDropdownItem checked caption="Size"/>
-                                            <RibbonDropdownItem caption="Creating"/>
-                                            <RibbonDropdownItem caption="Authors"/>
-                                            <RibbonDropdownItem checked-one caption="Tags"/>
-                                            <RibbonDropdownItem caption="Names"/>
-                                            <RibbonDropdownDivider/>
-                                            <RibbonDropdownItem caption="Columns..."/>
-                                        </RibbonDropdownMenu>
-                                    </RibbonDropdown>
+                                        <RibbonIconButton caption="Share" image="images/share.svg"/>
+                                        <RibbonDropdown>
+                                            <RibbonIconButton caption="Mail" image="images/email.svg"/>
+                                            <RibbonDropdownMenu>
+                                                <RibbonDropdownItem checked caption="Modification"/>
+                                                <RibbonDropdownItem checked caption="Type"/>
+                                                <RibbonDropdownItem checked caption="Size"/>
+                                                <RibbonDropdownItem caption="Creating"/>
+                                                <RibbonDropdownItem caption="Authors"/>
+                                                <RibbonDropdownItem checked-one caption="Tags"/>
+                                                <RibbonDropdownItem caption="Names"/>
+                                                <RibbonDropdownDivider/>
+                                                <RibbonDropdownItem caption="Columns..."/>
+                                            </RibbonDropdownMenu>
+                                        </RibbonDropdown>
+                                    </RibbonSubGroup>
 
                                     <RibbonDivider/>
 
@@ -115,6 +119,29 @@ class App extends Component{
                                             <RibbonDropdownItem caption="Columns..."/>
                                         </RibbonDropdownMenu>
                                     </RibbonDropdown>
+
+                                    <RibbonDivider/>
+
+                                    <RibbonButtonGroup radio>
+                                        <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-list"/>
+                                        <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-gear"/>
+                                        <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-barcode"/>
+                                        <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-font"/>
+                                        <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-video"/>
+                                        <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-camera"/>
+                                    </RibbonButtonGroup>
+
+                                    <RibbonButtonGroup style={{width: "100px"}}>
+                                        <RibbonIconButton caption="Italic" icon="fa-sharp fa-solid fa-italic"/>
+                                        <RibbonIconButton caption="Bold" icon="fa-sharp fa-solid fa-bold"/>
+                                        <RibbonIconButton caption="Underline" icon="fa-sharp fa-solid fa-underline"/>
+                                    </RibbonButtonGroup>
+
+                                    <RibbonButtonGroup style={{width: "74px", display: "flex", "flex-flow": "row", "justify-content": "center"}}>
+                                        <RibbonToolButton caption="Italic" icon="fa-sharp fa-solid fa-italic"/>
+                                        <RibbonToolButton caption="Bold" icon="fa-sharp fa-solid fa-bold"/>
+                                        <RibbonToolButton caption="Underline" icon="fa-sharp fa-solid fa-underline"/>
+                                    </RibbonButtonGroup>
                                 </RibbonGroup>
                             </RibbonTab>
                             <RibbonTab label="Edit">

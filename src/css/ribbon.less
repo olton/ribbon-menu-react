@@ -222,7 +222,7 @@
     }
 
     .caption {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .icon {
@@ -312,6 +312,7 @@
         display: block;
         text-align: center;
         min-width: 0;
+        min-height: 0;
         padding: 2px 4px;
         width: 100%;
         cursor: pointer;
@@ -500,6 +501,10 @@
         height: 20px;
         margin: 1px;
         background-color: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        line-height: 1.6;
 
         & > * {
             height: 18px;
