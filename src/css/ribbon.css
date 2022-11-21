@@ -28,7 +28,7 @@
   line-height: 24px;
 }
 .ribbon-menu .tabs-holder li {
-  color: #1d1d1d;
+  color: #000000;
   background-color: #ffffff;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
@@ -221,7 +221,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 0 4px 4px;
-  border-color: transparent transparent #1d1d1d transparent;
+  border-color: transparent transparent #000000 transparent;
   z-index: 1;
 }
 .ribbon-icon-button.dropdown-toggle {
@@ -292,7 +292,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 0 4px 4px;
-  border-color: transparent transparent #1d1d1d transparent;
+  border-color: transparent transparent #000000 transparent;
   z-index: 1;
 }
 .ribbon-split-button .ribbon-dropdown {
@@ -306,7 +306,7 @@
   display: block;
   position: absolute;
   background-color: #fbfcfd;
-  color: #1d1d1d;
+  color: #000000;
   padding: 2px;
   border: 1px solid #dadbdc;
   font-size: 12px;
@@ -349,16 +349,19 @@
 }
 .ribbon-dropdown .checked::before,
 .ribbon-dropdown .checked-one::before,
+.ribbon-dropdown .checked-item::before,
 .ribbon-dropdown .checked::after,
-.ribbon-dropdown .checked-one::after {
+.ribbon-dropdown .checked-one::after,
+.ribbon-dropdown .checked-item::after {
   position: absolute;
   display: block;
   content: "";
 }
 .ribbon-dropdown .checked::before,
-.ribbon-dropdown .checked-one::before {
+.ribbon-dropdown .checked-one::before,
+.ribbon-dropdown .checked-item::before {
   background-color: transparent;
-  border-color: #1d1d1d;
+  border-color: #000000;
   border-left: 2px solid;
   border-bottom: 2px solid;
   height: 0.325rem;
@@ -369,7 +372,8 @@
   z-index: 2;
 }
 .ribbon-dropdown .checked::after,
-.ribbon-dropdown .checked-one::after {
+.ribbon-dropdown .checked-one::after,
+.ribbon-dropdown .checked-item::after {
   width: 23px;
   height: 22px;
   top: 0;
@@ -384,7 +388,10 @@
   width: 0.4rem;
   height: 0.4rem;
   border-radius: 50%;
-  background-color: #1d1d1d;
+  background-color: #000000;
+}
+.ribbon-dropdown .checked-item:not(.checked)::before {
+  border-color: #dadbdc;
 }
 .ribbon-dropdown .ribbon-dropdown {
   top: -4px;

@@ -24,6 +24,7 @@ export const RibbonDropdownCheckItem = ({className, target, caption, checked, ..
     const [checkState, setCheckState] = useState(checked)
     const classes = classNames(
         className,
+        "checked-item",
         {checked: checkState}
     )
     return (

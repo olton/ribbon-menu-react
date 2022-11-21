@@ -9,7 +9,7 @@
 @ribbonDropdownBackground: #fbfcfd;
 @ribbonDropdownDivider: #dcddde;
 @ribbonDropdownShadow: #e3e4e5;
-@dark: #1d1d1d;
+@dark: rgb(0, 0, 0);
 @light: #f8f8f8;
 @white: #ffffff;
 @zindex-dropdown: 1000;
@@ -429,8 +429,7 @@
         background-color: @ribbonDropdownDivider;
     }
 
-    .checked, .checked-one {
-
+    .checked, .checked-one, .checked-item {
         &::before, &::after {
             position: absolute;
             display: block;
@@ -473,6 +472,12 @@
             height: .4rem;
             border-radius: 50%;
             background-color: @dark;
+        }
+    }
+
+    .checked-item:not(.checked) {
+        &::before {
+            border-color: #dadbdc;
         }
     }
 
