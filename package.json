@@ -2,7 +2,6 @@
     "name": "@olton/ribbon-menu-react",
     "version": "0.1.0",
     "description": "Ribbon Menu component for React",
-    "main": "src/index.js",
     "source": "html/index.html",
     "repository": {
         "type": "git",
@@ -13,9 +12,10 @@
     },
     "homepage": "https://github.com/olton/ribbon-menu-react.git",
     "scripts": {
+        "assets": "copyfiles -u 2 html/images/*.* dist/images",
         "clear": "shx rm -rf dist/* lib/*",
-        "start": "npm run clear && copyfiles -u 2 html/images/*.* dist/images && parcel --open",
-        "build": "npm run clear && parcel build --public-url ."
+        "start": "npm run clear && npm run assets && parcel --open",
+        "build": "npm run clear && npm run assets && parcel build --public-url ."
     },
     "author": "Serhii Pimenov <serhii@pimenov.com.ua>",
     "license": "MIT",
