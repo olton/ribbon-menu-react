@@ -106,8 +106,6 @@ export class RibbonMenu extends React.Component {
             return
         }
 
-        console.log(label)
-
         this.setState({
             activeTab: label
         })

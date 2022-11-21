@@ -295,6 +295,9 @@
   border-color: transparent transparent #1d1d1d transparent;
   z-index: 1;
 }
+.ribbon-split-button .ribbon-dropdown {
+  text-align: left;
+}
 .ribbon-dropdown {
   list-style: none inside;
   margin: 0;
@@ -319,6 +322,7 @@
   background-color: inherit;
   color: inherit;
   height: 24px;
+  cursor: pointer;
 }
 .ribbon-dropdown li {
   border: 1px solid transparent;

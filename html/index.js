@@ -6,7 +6,7 @@ import "./css/index.css"
 import {RibbonIconButton} from "../src/ribbon/icon-button";
 import {RibbonToolButton} from "../src/ribbon/tool-button";
 import {
-    RibbonDropdown,
+    RibbonDropdown, RibbonDropdownCheckItem,
     RibbonDropdownDivider,
     RibbonDropdownItem,
     RibbonDropdownMenu
@@ -45,12 +45,12 @@ class App extends Component{
                                     <RibbonDropdown>
                                         <RibbonButton className="dropdown-toggle" caption="Mail" image="images/email.svg"/>
                                         <RibbonDropdownMenu>
-                                            <RibbonDropdownItem checked caption="Modification"/>
-                                            <RibbonDropdownItem checked caption="Type"/>
-                                            <RibbonDropdownItem checked caption="Size"/>
-                                            <RibbonDropdownItem caption="Creating"/>
+                                            <RibbonDropdownCheckItem checked caption="Modification"/>
+                                            <RibbonDropdownCheckItem checked caption="Type"/>
+                                            <RibbonDropdownCheckItem checked caption="Size"/>
+                                            <RibbonDropdownItem caption="Creating" onClick={()=>console.log("ku")}/>
                                             <RibbonDropdownItem caption="Authors"/>
-                                            <RibbonDropdownItem checkedOne caption="Tags"/>
+                                            <RibbonDropdownCheckItem checked caption="Tags"/>
                                             <RibbonDropdownItem caption="Names"/>
                                             <RibbonDropdownDivider/>
                                             <RibbonDropdown>
@@ -58,7 +58,7 @@ class App extends Component{
                                                 <RibbonDropdownMenu>
                                                     <RibbonDropdownItem caption="SubItem1"/>
                                                     <RibbonDropdownItem caption="SubItem2"/>
-                                                    <RibbonDropdownItem caption="SubItem3"/>
+                                                    <RibbonDropdownCheckItem checked caption="SubItem3"/>
                                                 </RibbonDropdownMenu>
                                             </RibbonDropdown>
                                         </RibbonDropdownMenu>
@@ -72,12 +72,12 @@ class App extends Component{
                                         <RibbonDropdown>
                                             <RibbonIconButton caption="Mail" image="images/email.svg"/>
                                             <RibbonDropdownMenu>
-                                                <RibbonDropdownItem checked caption="Modification"/>
-                                                <RibbonDropdownItem checked caption="Type"/>
-                                                <RibbonDropdownItem checked caption="Size"/>
+                                                <RibbonDropdownCheckItem checked caption="Modification"/>
+                                                <RibbonDropdownCheckItem checked caption="Type"/>
+                                                <RibbonDropdownCheckItem checked caption="Size"/>
                                                 <RibbonDropdownItem caption="Creating"/>
                                                 <RibbonDropdownItem caption="Authors"/>
-                                                <RibbonDropdownItem checked-one caption="Tags"/>
+                                                <RibbonDropdownCheckItem checked caption="Tags"/>
                                                 <RibbonDropdownItem caption="Names"/>
                                                 <RibbonDropdownDivider/>
                                                 <RibbonDropdownItem caption="Columns..."/>
@@ -89,12 +89,12 @@ class App extends Component{
 
                                     <RibbonSplitButton image="images/email.svg" caption="Options">
                                         <RibbonDropdownMenu>
-                                            <RibbonDropdownItem checked caption="Modification"/>
-                                            <RibbonDropdownItem checked caption="Type"/>
-                                            <RibbonDropdownItem checked caption="Size"/>
+                                            <RibbonDropdownCheckItem checked caption="Modification"/>
+                                            <RibbonDropdownCheckItem checked caption="Type"/>
+                                            <RibbonDropdownCheckItem checked caption="Size"/>
                                             <RibbonDropdownItem caption="Creating"/>
                                             <RibbonDropdownItem caption="Authors"/>
-                                            <RibbonDropdownItem checked-one caption="Tags"/>
+                                            <RibbonDropdownCheckItem checked caption="Tags"/>
                                             <RibbonDropdownItem caption="Names"/>
                                             <RibbonDropdownDivider/>
                                             <RibbonDropdownItem caption="Columns..."/>
@@ -108,12 +108,12 @@ class App extends Component{
                                     <RibbonDropdown>
                                         <RibbonToolButton caption="Mail" image="images/email.svg"/>
                                         <RibbonDropdownMenu>
-                                            <RibbonDropdownItem checked caption="Modification"/>
-                                            <RibbonDropdownItem checked caption="Type"/>
-                                            <RibbonDropdownItem checked caption="Size"/>
+                                            <RibbonDropdownCheckItem checked caption="Modification"/>
+                                            <RibbonDropdownCheckItem checked caption="Type"/>
+                                            <RibbonDropdownCheckItem checked caption="Size"/>
                                             <RibbonDropdownItem caption="Creating"/>
                                             <RibbonDropdownItem caption="Authors"/>
-                                            <RibbonDropdownItem checked-one caption="Tags"/>
+                                            <RibbonDropdownCheckItem checked caption="Tags"/>
                                             <RibbonDropdownItem caption="Names"/>
                                             <RibbonDropdownDivider/>
                                             <RibbonDropdownItem caption="Columns..."/>
@@ -137,7 +137,7 @@ class App extends Component{
                                         <RibbonIconButton caption="Underline" icon="fa-sharp fa-solid fa-underline"/>
                                     </RibbonButtonGroup>
 
-                                    <RibbonButtonGroup style={{width: "74px", display: "flex", "flex-flow": "row", "justify-content": "center"}}>
+                                    <RibbonButtonGroup style={{width: "74px", display: "flex", flexFlow: "row", justifyContent: "center"}}>
                                         <RibbonToolButton caption="Italic" icon="fa-sharp fa-solid fa-italic"/>
                                         <RibbonToolButton caption="Bold" icon="fa-sharp fa-solid fa-bold"/>
                                         <RibbonToolButton caption="Underline" icon="fa-sharp fa-solid fa-underline"/>
