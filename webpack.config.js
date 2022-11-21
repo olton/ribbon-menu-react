@@ -2,10 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: 'src/index.js',
+    entry: './src/index.js',
     output: {
-        path: path.join(__dirname, '/dist'),
-        filename: 'index_bundle.js'
+        path: path.join(__dirname, '/webpack'),
+        filename: 'ribbon-menu-react.js'
     },
     devServer: {
         inline: true,
@@ -17,15 +17,15 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
-                query: {
-                    presets: ['es2015', 'react']
+                options:{
+                    presets:[ "@babel/preset-react"]    // используемые плагины
                 }
-            }
+            },
+            { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
         ]
     },
     plugins:[
-        new HtmlWebpackPlugin({
-            template: 'html/index.html'
-        })
-    ]
+        new HtmlWebpackPlugin()
+    ],
+    mode: "production"
 }

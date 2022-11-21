@@ -1,7 +1,7 @@
 import {Children, cloneElement} from "react";
-import Dropdown from "../helpers/dropdown";
-import {RibbonIconButton} from "./icon-button";
-import {RibbonButton} from "./button";
+import Dropdown from "../helpers/dropdown.jsx";
+import {RibbonIconButton} from "./icon-button.jsx";
+import {RibbonButton} from "./button.jsx";
 
 export const RibbonSplitButton = ({children: ch, caption, icon, image, ...rest}) => {
     const children = Children.toArray(ch)

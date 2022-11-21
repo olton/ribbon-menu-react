@@ -1,5 +1,5 @@
-import {Icon} from "../helpers/icon";
-import {Image} from "../helpers/image";
+import {Icon} from "../helpers/icon.jsx";
+import {Image} from "../helpers/image.jsx";
 
 export const RibbonToolButton = ({className, cls, icon, image, caption, ...rest}) => {
     return (

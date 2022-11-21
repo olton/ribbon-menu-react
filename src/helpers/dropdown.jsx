@@ -1,6 +1,6 @@
 import React from "react";
-import Collapse from "./collapse";
-import "./dropdown.css";
+import Collapse from "./collapse.jsx";
+import "../css/dropdown.css";
 
 export default class Dropdown extends React.Component {
     constructor(props){

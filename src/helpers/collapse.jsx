@@ -1,5 +1,5 @@
 import React from "react";
-import "./collapse.css";
+import "../css/collapse.css";
 
 const COLLAPSED = "collapsed";
 const COLLAPSING = "collapsing";

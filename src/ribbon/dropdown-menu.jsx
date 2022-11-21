@@ -1,7 +1,7 @@
 import {Children, cloneElement, useState} from "react"
-import Dropdown from "../helpers/dropdown";
 import classNames from "classnames";
 import PropTypes from "prop-types";
+import Dropdown from "../helpers/dropdown.jsx";
 
 export const RibbonDropdownDivider = () => {
     return (

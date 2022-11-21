@@ -1,5 +1,4 @@
-import React, {Children, cloneElement} from "react";
-import PropTypes from "prop-types";
+import React, {Children} from "react";
 import classNames from "classnames";
 
 export const RibbonTabNav = ({staticTab, label, active, className, children, onChangeActiveTab, onClick, index}) => {
