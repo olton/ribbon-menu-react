@@ -2,14 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './html/index.js',
     output: {
-        path: path.join(__dirname, '/webpack'),
-        filename: 'ribbon-menu-react.js'
+        path: path.resolve(__dirname, '/dist'),
+        filename: '[name].bundle.js',
+        clean: true
     },
+    devtool: 'source-map',
     devServer: {
-        inline: true,
-        port: 8080
+        hot: true
     },
     module: {
         rules: [
@@ -18,14 +19,27 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 options:{
-                    presets:[ "@babel/preset-react"]    // используемые плагины
+                    presets:[ "@babel/preset-react"]
                 }
             },
-            { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
+            {
+                test: /\.css$/,
+                use: [ 'style-loader', 'css-loader' ]
+            },
+            {
+                test: /\.svg$/,
+                type: "asset",
+                use: "svgo-loader"
+            }
         ]
     },
     plugins:[
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            template: "html/template.html"
+        })
     ],
-    mode: "production"
+    mode: "production",
+    performance: {
+        hints: false,
+    }
 }

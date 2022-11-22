@@ -16,7 +16,9 @@
         "clear": "shx rm -rf dist/* lib/*",
         "start": "npm run clear && npm run assets && parcel --open",
         "build": "npm run clear && npm run assets && parcel build --public-url .",
-        "webpack": "webpack"
+        "webpack": "webpack serve",
+        "webpack:dev": "webpack",
+        "webpack:pros": "webpack --mode=production"
     },
     "author": "Serhii Pimenov <serhii@pimenov.com.ua>",
     "license": "MIT",
@@ -52,7 +54,9 @@
         "process": "^0.11.10",
         "shx": "^0.3.4",
         "style-loader": "^3.3.1",
+        "svgo-loader": "^3.0.3",
         "webpack": "^5.75.0",
-        "webpack-cli": "^5.0.0"
+        "webpack-cli": "^5.0.0",
+        "webpack-dev-server": "^4.11.1"
     }
 }

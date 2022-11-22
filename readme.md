@@ -11,8 +11,9 @@ Contextual tabs are tabs that appear only when the user needs them.
 
 <hr>
 
-### Component sponsored by [Giovanni Tummarello](g.tummarello@octostar.co)
+# Component sponsored by [Octostar.co](https://octostar.co/)
 
+- You can contact to sponsor on https://octostar.co/contact-us/
 <hr>
 
 ### Metro UI
