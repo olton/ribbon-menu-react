@@ -30,7 +30,7 @@ class App extends Component{
                     <h5 className={`m-0`}>Component sponsored by <a href={`https://octostar.co/`}>Octostar.co</a> </h5>
                 </div>
 
-                <div className={`container window`}>
+                <div className={`container window no-overflow`} style={{height: "600px"}}>
                     <div className={`window-caption`}>
                         <span className={`caption-title`}>Ribbon Menu For React Demo</span>
                         <div className={`caption-buttons`}>
@@ -43,7 +43,7 @@ class App extends Component{
                     <RibbonMenu>
                             <RibbonTab mode="static" label="Home"></RibbonTab>
                             <RibbonTab label="File">
-                                <RibbonGroup title="group1">
+                                <RibbonGroup title="Push Buttons">
                                     <RibbonButton caption="Mail" icon="mif-envelop"/>
                                     <RibbonButton caption="Share" icon="mif-share"/>
 
@@ -68,14 +68,13 @@ class App extends Component{
                                             </RibbonDropdown>
                                         </RibbonDropdownMenu>
                                     </RibbonDropdown>
-
-                                    <RibbonDivider/>
-
+                                </RibbonGroup>
+                                <RibbonGroup title="Icon and Tools Buttons">
                                     <RibbonSubGroup style={{width: '60px'}}>
-                                        <RibbonIconButton caption="Mail" image="images/email.svg"/>
-                                        <RibbonIconButton caption="Share" image="images/share.svg"/>
+                                        <RibbonIconButton caption="Mail" icon="mif-envelop"/>
+                                        <RibbonIconButton caption="Share" icon="mif-share"/>
                                         <RibbonDropdown>
-                                            <RibbonIconButton caption="Mail" image="images/email.svg"/>
+                                            <RibbonIconButton caption="Apps" icon="mif-apps"/>
                                             <RibbonDropdownMenu>
                                                 <RibbonDropdownCheckItem checked caption="Modification"/>
                                                 <RibbonDropdownCheckItem checked caption="Type"/>
@@ -92,7 +91,31 @@ class App extends Component{
 
                                     <RibbonDivider/>
 
-                                    <RibbonSplitButton image="images/email.svg" caption="Options">
+                                    <RibbonSubGroup style={{display: "flex", flexFlow: "row wrap", width: "74px"}}>
+                                        <RibbonToolButton caption="Mail" icon="mif-envelop"/>
+                                        <RibbonToolButton caption="Share" icon="mif-share"/>
+                                        <RibbonToolButton caption="Settings" icon="mif-cogs"/>
+                                        <RibbonToolButton caption="Bell" icon="mif-bell"/>
+                                        <RibbonToolButton caption="Alarm" icon="mif-alarm"/>
+                                        <RibbonDropdown>
+                                            <RibbonToolButton caption="Apps" icon="mif-apps"/>
+                                            <RibbonDropdownMenu>
+                                                <RibbonDropdownCheckItem checked caption="Modification"/>
+                                                <RibbonDropdownCheckItem checked caption="Type"/>
+                                                <RibbonDropdownCheckItem checked caption="Size"/>
+                                                <RibbonDropdownItem caption="Creating"/>
+                                                <RibbonDropdownItem caption="Authors"/>
+                                                <RibbonDropdownCheckItem checked caption="Tags"/>
+                                                <RibbonDropdownItem caption="Names"/>
+                                                <RibbonDropdownDivider/>
+                                                <RibbonDropdownItem caption="Columns..."/>
+                                            </RibbonDropdownMenu>
+                                        </RibbonDropdown>
+                                    </RibbonSubGroup>
+                                </RibbonGroup>
+
+                                <RibbonGroup title="Split">
+                                    <RibbonSplitButton icon="mif-cog" caption="Options">
                                         <RibbonDropdownMenu>
                                             <RibbonDropdownCheckItem checked caption="Modification"/>
                                             <RibbonDropdownCheckItem checked caption="Type"/>
@@ -105,47 +128,28 @@ class App extends Component{
                                             <RibbonDropdownItem caption="Columns..."/>
                                         </RibbonDropdownMenu>
                                     </RibbonSplitButton>
+                                </RibbonGroup>
 
-                                    <RibbonDivider/>
-
-                                    <RibbonToolButton caption="Mail" image="images/email.svg"/>
-                                    <RibbonToolButton caption="Share" image="images/share.svg"/>
-                                    <RibbonDropdown>
-                                        <RibbonToolButton caption="Mail" image="images/email.svg"/>
-                                        <RibbonDropdownMenu>
-                                            <RibbonDropdownCheckItem checked caption="Modification"/>
-                                            <RibbonDropdownCheckItem checked caption="Type"/>
-                                            <RibbonDropdownCheckItem checked caption="Size"/>
-                                            <RibbonDropdownItem caption="Creating"/>
-                                            <RibbonDropdownItem caption="Authors"/>
-                                            <RibbonDropdownCheckItem checked caption="Tags"/>
-                                            <RibbonDropdownItem caption="Names"/>
-                                            <RibbonDropdownDivider/>
-                                            <RibbonDropdownItem caption="Columns..."/>
-                                        </RibbonDropdownMenu>
-                                    </RibbonDropdown>
-
-                                    <RibbonDivider/>
-
+                                <RibbonGroup title="Grouped Buttons" className="no-overflow">
                                     <RibbonButtonGroup radio  style={{width: "200px"}}>
-                                        <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-list"/>
-                                        <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-gear"/>
-                                        <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-barcode"/>
-                                        <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-font"/>
-                                        <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-video"/>
-                                        <RibbonIconButton caption="Mail" icon="fa-sharp fa-solid fa-camera"/>
+                                        <RibbonIconButton caption="List" icon="mif-list"/>
+                                        <RibbonIconButton caption="Gear" icon="mif-cog"/>
+                                        <RibbonIconButton caption="Barcode" icon="mif-barcode"/>
+                                        <RibbonIconButton caption="Bell" icon="mif-bell"/>
+                                        <RibbonIconButton caption="Cast" icon="mif-cast"/>
+                                        <RibbonIconButton caption="Calculator" icon="mif-calculator2"/>
                                     </RibbonButtonGroup>
 
                                     <RibbonButtonGroup style={{width: "100px"}}>
-                                        <RibbonIconButton caption="Italic" icon="fa-sharp fa-solid fa-italic"/>
-                                        <RibbonIconButton caption="Bold" icon="fa-sharp fa-solid fa-bold"/>
-                                        <RibbonIconButton caption="Underline" icon="fa-sharp fa-solid fa-underline"/>
+                                        <RibbonIconButton caption="Italic" icon="mif-italic"/>
+                                        <RibbonIconButton caption="Bold" icon="mif-bold"/>
+                                        <RibbonIconButton caption="Underline" icon="mif-underline"/>
                                     </RibbonButtonGroup>
 
                                     <RibbonButtonGroup style={{width: "74px", display: "flex", flexFlow: "row", justifyContent: "center"}}>
-                                        <RibbonToolButton caption="Italic" icon="fa-sharp fa-solid fa-italic"/>
-                                        <RibbonToolButton caption="Bold" icon="fa-sharp fa-solid fa-bold"/>
-                                        <RibbonToolButton caption="Underline" icon="fa-sharp fa-solid fa-underline"/>
+                                        <RibbonToolButton caption="Italic" icon="mif-italic"/>
+                                        <RibbonToolButton caption="Bold" icon="mif-bold"/>
+                                        <RibbonToolButton caption="Underline" icon="mif-underline"/>
                                     </RibbonButtonGroup>
                                 </RibbonGroup>
                             </RibbonTab>

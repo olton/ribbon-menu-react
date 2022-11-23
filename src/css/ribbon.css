@@ -71,6 +71,7 @@
   padding: 4px 4px;
   border-bottom: 1px solid #dadbdc;
   justify-content: flex-start;
+  flex-shrink: 0;
 }
 .ribbon-menu .content-holder .ribbon-section.active {
   display: flex;
@@ -91,6 +92,7 @@
   position: relative;
   align-items: flex-start;
   align-content: flex-start;
+  flex-shrink: 0;
 }
 .ribbon-menu .content-holder .group:nth-child(1):last-child {
   flex-basis: 100%;
@@ -463,5 +465,8 @@
   .ribbon-menu .content-holder .ribbon-section {
     height: 130px;
   }
+}
+.no-overflow {
+  overflow: hidden;
 }
 /*# sourceMappingURL=ribbon.css.map */

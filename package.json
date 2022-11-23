@@ -1,8 +1,9 @@
 {
     "name": "@olton/ribbon-menu-react",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Ribbon Menu component for React",
     "source": "html/index.html",
+    "main": "src/index.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/olton/ribbon-menu-react.git"
@@ -14,8 +15,8 @@
     "scripts": {
         "assets": "copyfiles -u 2 html/images/*.* dist/images",
         "clear": "shx rm -rf dist/* lib/*",
-        "start": "npm run clear && npm run assets && parcel --open",
-        "build": "npm run clear && npm run assets && parcel build --public-url .",
+        "start": "npm run clear && npm run assets && parcel --open html/index.html",
+        "build": "npm run clear && npm run assets && parcel build --public-url . html/index.html",
         "webpack": "webpack serve",
         "webpack:dev": "webpack",
         "webpack:pros": "webpack --mode=production"
@@ -46,15 +47,21 @@
         "@babel/plugin-syntax-export-default-from": "^7.18.6",
         "@babel/preset-env": "^7.20.2",
         "@babel/preset-react": "^7.18.6",
+        "assert": "^2.0.0",
         "babel-loader": "^9.1.0",
         "copyfiles": "^2.4.1",
         "css-loader": "^6.7.2",
         "html-webpack-plugin": "^5.5.0",
         "parcel": "^2.8.0",
+        "path-browserify": "^1.0.1",
         "process": "^0.11.10",
+        "punycode": "^2.1.1",
+        "querystring-es3": "^0.2.1",
         "shx": "^0.3.4",
         "style-loader": "^3.3.1",
         "svgo-loader": "^3.0.3",
+        "url": "^0.11.0",
+        "util": "^0.12.5",
         "webpack": "^5.75.0",
         "webpack-cli": "^5.0.0",
         "webpack-dev-server": "^4.11.1"

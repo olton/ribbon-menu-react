@@ -1,7 +1,7 @@
 import React, {Children} from "react";
 import classNames from "classnames";
 
-export const RibbonTabNav = ({staticTab, label, active, className, children, onChangeActiveTab, onClick, index}) => {
+export const RibbonTabNav = ({staticTab, label, active, className, onClick, index}) => {
     const classes = classNames(
         className,
         {static: staticTab},
@@ -15,7 +15,7 @@ export const RibbonTabNav = ({staticTab, label, active, className, children, onC
     )
 }
 
-export const RibbonTab = ({title, active, className, children}) => {
+export const RibbonTab = ({active, className, children}) => {
     const classes = classNames(
         `ribbon-section`,
         className,
@@ -35,9 +35,9 @@ export const RibbonDivider = () => {
     )
 }
 
-export const RibbonGroup = ({cls, className, children, title}) => {
+export const RibbonGroup = ({cls, className, children, title, ...rest}) => {
     return (
-        <div className={['group', cls, className].join(" ")}>
+        <div className={['group', cls, className].join(" ")} {...rest}>
             {children}
             {title && (
                 <span className="title">{title}</span>
