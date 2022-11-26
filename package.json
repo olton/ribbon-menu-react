@@ -1,9 +1,9 @@
 {
     "name": "@olton/ribbon-menu-react",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "Ribbon Menu component for React",
     "source": "html/index.html",
-    "main": "build/ribbon-menu.js",
+    "main": "src/index.js",
     "type": "module",
     "repository": {
         "type": "git",
