@@ -19,11 +19,12 @@ export default [
                 'process.env.NODE_ENV': JSON.stringify( 'development' ),
                 preventAssignment: true,
             }),
+            commonjs(),
             babel({
                 presets: ["@babel/preset-react"],
-                babelHelpers: 'bundled',
+                babelHelpers: 'runtime',
+                skipPreflightCheck: true
             }),
-            commonjs()
         ]
     },
 ]

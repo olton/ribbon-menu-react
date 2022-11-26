@@ -19,7 +19,10 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 options:{
-                    presets:[ "@babel/preset-react"]
+                    presets:[
+                        "@babel/preset-env",
+                        ["@babel/preset-react", {"runtime": "automatic"}]
+                    ]
                 }
             },
             {
@@ -30,10 +33,10 @@ module.exports = {
     },
     plugins:[
         new HtmlWebpackPlugin({
-            template: "html/template.html"
+            template: "html/index.html"
         })
     ],
-    mode: "production",
+    mode: "development",
     performance: {
         hints: false,
     }

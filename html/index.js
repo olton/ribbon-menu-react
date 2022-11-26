@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { createRoot } from 'react-dom/client';
 import {
     RibbonButton,
@@ -16,11 +16,11 @@ import {
     RibbonSplitButton,
     RibbonButtonGroup,
     RibbonSubGroup
-} from "../build/ribbon-menu.js";
-import "../build/ribbon-menu.css"
+} from "../src/index.js";
+import "../src/css/ribbon.css"
 import "./css/index.css"
 
-class App extends Component{
+class App extends React.Component{
     render(){
         return(
             <section className={`container-fluid`}>
