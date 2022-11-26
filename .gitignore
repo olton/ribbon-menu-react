@@ -6,3 +6,5 @@ dist/
 .idea
 .vscode
 .parcel-cache
+*.bat
+build/

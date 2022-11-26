@@ -4,8 +4,9 @@ import PropTypes from "prop-types";
 import Dropdown from "../helpers/dropdown.jsx";
 
 export const RibbonDropdownDivider = () => {
+    const classes = classNames("divider")
     return (
-        <li className="divider"></li>
+        <li className={classes}></li>
     )
 }
 
@@ -50,8 +51,9 @@ RibbonDropdownCheckItem.defaultProps = {
 }
 
 export const RibbonDropdownMenu = ({children}) => {
+    const classes = classNames("ribbon-dropdown")
     return (
-        <ul className="ribbon-dropdown">
+        <ul className={classes}>
             {children}
         </ul>
     )

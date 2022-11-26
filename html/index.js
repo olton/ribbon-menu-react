@@ -16,8 +16,8 @@ import {
     RibbonSplitButton,
     RibbonButtonGroup,
     RibbonSubGroup
-} from "../src";
-
+} from "../build/ribbon-menu.js";
+import "../build/ribbon-menu.css"
 import "./css/index.css"
 
 class App extends Component{
@@ -160,6 +160,7 @@ class App extends Component{
                                 View
                             </RibbonTab>
                     </RibbonMenu>
+
                 </div>
             </section>
         );

@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 
 export class RibbonButtonGroup extends React.Component {
     constructor(props){
@@ -48,9 +49,15 @@ export class RibbonButtonGroup extends React.Component {
     render(){
         const {cls, className, clsActive, clsButton, style} = this.props;
         const {buttons} = this.state;
+        const classes = classNames(
+            "ribbon-toggle-group",
+            "button-group",
+            cls,
+            className
+        )
 
         return (
-            <div className={`ribbon-toggle-group button-group ${cls} ${className}`} style={style}>
+            <div className={classes} style={style}>
                 {
                     React.Children.map(this.props.children, (button, index) => {
                         const correctIndex = index + 1;

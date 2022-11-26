@@ -28,7 +28,7 @@
   line-height: 24px;
 }
 .ribbon-menu .tabs-holder li {
-  color: #000000;
+  color: #1d1d1d;
   background-color: #ffffff;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
@@ -223,7 +223,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 0 4px 4px;
-  border-color: transparent transparent #000000 transparent;
+  border-color: transparent transparent #1d1d1d transparent;
   z-index: 1;
 }
 .ribbon-icon-button.dropdown-toggle {
@@ -294,7 +294,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 0 4px 4px;
-  border-color: transparent transparent #000000 transparent;
+  border-color: transparent transparent #1d1d1d transparent;
   z-index: 1;
 }
 .ribbon-split-button .ribbon-dropdown {
@@ -308,7 +308,7 @@
   display: block;
   position: absolute;
   background-color: #fbfcfd;
-  color: #000000;
+  color: #1d1d1d;
   padding: 2px;
   border: 1px solid #dadbdc;
   font-size: 12px;
@@ -363,7 +363,7 @@
 .ribbon-dropdown .checked-one::before,
 .ribbon-dropdown .checked-item::before {
   background-color: transparent;
-  border-color: #000000;
+  border-color: #1d1d1d;
   border-left: 2px solid;
   border-bottom: 2px solid;
   height: 0.325rem;
@@ -390,7 +390,7 @@
   width: 0.4rem;
   height: 0.4rem;
   border-radius: 50%;
-  background-color: #000000;
+  background-color: #1d1d1d;
 }
 .ribbon-dropdown .checked-item:not(.checked)::before {
   border-color: #dadbdc;
@@ -453,20 +453,123 @@
   border-color: #1979ca;
   background-color: rgba(164, 206, 249, 0.8) !important;
 }
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
-  .ribbon-menu .content-holder .ribbon-section {
-    height: 130px;
-  }
-  .ribbon-toggle-group {
-    height: 80px;
-  }
-}
-@supports (-ms-ime-align:auto) {
-  .ribbon-menu .content-holder .ribbon-section {
-    height: 130px;
-  }
-}
 .no-overflow {
   overflow: hidden;
+}
+.collapse-css-transition {
+  transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.collapse-css-transition > * {
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+.-c-is--collapsing > * {
+  transform: translateY(-6px);
+}
+.-c-is--collapsed > * {
+  transform: translateY(-6px);
+}
+.-c-is--expanding > * {
+  transform: translateX(0);
+}
+.-c-is--expanded > * {
+  transform: translateX(0);
+}
+.dropdown {
+  display: block;
+  float: left;
+  width: auto;
+  background: inherit;
+  position: relative;
+}
+.dropdown .drop-object {
+  position: absolute;
+  z-index: 1000;
+}
+.dropdown .drop-object.place-right {
+  left: auto;
+  right: 0;
+}
+.dropdown .dropdown {
+  width: 100%;
+}
+.dropdown .dropdown .drop-object {
+  top: -4px;
+  left: 100%;
+}
+.dropdown .dropdown .dropdown-toggle {
+  padding-right: 2rem;
+}
+.dropdown.dropped > .dropdown-toggle::before {
+  transform: rotate(135deg);
+  transition: all 0.15s ease-in-out;
+}
+.dropdown.dropped .dropdown.dropped > .dropdown-toggle::before {
+  transform: rotate(45deg);
+  transition: all 0.15s ease-in-out;
+}
+.dropdown-toggle {
+  position: relative;
+  cursor: pointer;
+  padding-right: 1.5rem;
+  user-select: none;
+}
+.dropdown-toggle::before {
+  display: block;
+  position: absolute;
+  vertical-align: middle;
+  color: transparent;
+  font-size: 0;
+  content: "";
+  height: 5px;
+  width: 5px;
+  background-color: transparent ;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #1d1d1d;
+  top: 50%;
+  left: 100%;
+  margin-left: -1rem;
+  margin-top: -0.1625rem;
+  z-index: 2;
+  transform: rotate(-45deg);
+  transition: all 0.15s ease-in-out;
+  transform-origin: center center 1px;
+}
+.dropdown-toggle.drop-marker-light::before,
+.dropdown-toggle.marker-light::before {
+  border-color: #ffffff;
+}
+.dropdown-toggle.no-marker::before {
+  display: none;
+}
+.dropdown-toggle.active-toggle::before,
+.dropdown-toggle.active-container::before {
+  transform: rotate(135deg);
+  transition: all 0.15s ease-in-out;
+}
+.dropdown-toggle.marker-center::before {
+  left: 50%;
+  top: 50%;
+  margin-left: 0;
+  margin-top: 0;
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.dropdown-toggle.marker-center.active-toggle::before,
+.dropdown-toggle.marker-center.active-container::before {
+  transform: translateX(-50%) translateY(-50%) rotate(135deg);
+  transition: all 0.15s ease-in-out;
+}
+.drop-left {
+  right: 100%;
+  top: 0;
+}
+.drop-right {
+  left: 100%;
+  top: 0;
+}
+.drop-up {
+  top: auto;
+  bottom: 100%;
 }
 /*# sourceMappingURL=ribbon.css.map */
